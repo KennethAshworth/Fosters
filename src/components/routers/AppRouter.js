@@ -19,8 +19,10 @@ export const AppRouter = () => (
             <Header />            
             <Switch>
                 <Route path='/' component={HomePage} exact={true} />
-                <Route path='/zipcodes' component={ZipCodesPage} />
-                <Route path='/about' component={AboutPage} />
+                <Route path='/faq' component={FaqPage} />
+                <Route path='/contact' component={ContactPage} />
+                <Route path='/applicant' component={ApplicantPage} />
+                <Route path='/bio' component={BioPage} />
                 <Redirect to="/" />
             </Switch>
         </Fragment>

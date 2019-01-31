@@ -1,5 +1,3 @@
-![react-redux-starter](https://user-images.githubusercontent.com/33935506/36640376-e23a592e-1a25-11e8-9567-ec4622684159.png)
-
 # Fosters
 
 A basic animal adoption website that consists of the essential elements that are required to showcase eligible animals, accept applications, review FAQ, and contact site owners.
