@@ -1,20 +1,20 @@
 // IMPORT DATA FROM STATIC JSON FILE
 
-import zips from './zips.json';
+import fosters from './fosters.json';
 
 
 // COMPONENT
 
 const simulateError = false;
 
-export const fetchZipCodes = () => {
+export const fetchFosters = () => {
     return new Promise((resolve, reject) => {
         // simulate lengthy service call
         setTimeout(() => {
             if (simulateError) {
-                reject('Failed to fetch list of zip codes');
+                reject('Failed to fetch list of fosters animals');
             } else {
-                resolve(zips);
+                resolve(fosters);
             }
         }, 1000);
     });

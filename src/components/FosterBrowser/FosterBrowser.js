@@ -6,65 +6,66 @@ import { bindActionCreators } from 'redux';
 
 // IMPORT PROJECT REFERENCES
 
-import { fetchZipCodes } from '../state/actions/ZipCodeActions';
-import { ZipCodeList } from './ZipCodeList';
+import { fetchFosters } from '../state/actions/FostersActions';
+import { FosterList } from './FosterList';
 import { LoadingIndicator } from '../shared/LoadingIndicator/LoadingIndicator';
 import { Error } from '../shared/Error/Error';
 
 
 // COMPONENT
 
-class ZipCodeBrowser extends Component {
+class FosterBrowser extends Component {
 
     constructor(props) {
         super(props);
     }
 
     componentDidMount() {
-        this.props.fetchZipCodes();
+        this.props.fetchFosters();
     }
 
     render() {
+        console.log(this.props.fosters);
         return (
             <div>
                 {
-                    this.props.fetched && <ZipCodeList zipCodes={this.props.zipCodes} />
+                    this.props.fetched && <FosterList fosters={this.props.fosters} />
                 }
                 {
                     <LoadingIndicator busy={this.props.fetching} />
                 }
                 {
-                    this.props.failed && <Error message="Failed to fetch list of zip codes" />
+                    this.props.failed && <Error message="Failed to fetch list of foster animals" />
                 }
             </div>
         );
     }
 }
 
-ZipCodeBrowser.propTypes = {
-    fetchZipCodes: PropTypes.func.isRequired,
+FosterBrowser.propTypes = {
+    fetchFosters: PropTypes.func.isRequired,
     fetched: PropTypes.bool.isRequired,
     fetching: PropTypes.bool.isRequired,
     failed: PropTypes.bool,
-    zipCodes: PropTypes.array.isRequired
+    fosters: PropTypes.array.isRequired
 };
 
 
 // CONFIGURE REACT REDUX
 
 const mapStateToProps = state => {
-    const { fetching, fetched, failed, zipCodes } = state.zipCodes;
+    const { fetching, fetched, failed, fosters } = state.fosters;
 
-    return { fetching, fetched, failed, zipCodes };
+    return { fetching, fetched, failed, fosters };
 };
 
 const mapDispatchToProps = dispatch => (
-    bindActionCreators({ fetchZipCodes }, dispatch)
+    bindActionCreators({ fetchFosters }, dispatch)
 );
 
-const hoc = connect(mapStateToProps, mapDispatchToProps)(ZipCodeBrowser);
+const hoc = connect(mapStateToProps, mapDispatchToProps)(FosterBrowser);
 
 
 // EXPORT COMPONENT
 
-export { hoc as ZipCodeBrowser };
+export { hoc as FosterBrowser };

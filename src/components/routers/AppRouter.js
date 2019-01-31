@@ -7,8 +7,10 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import { Header } from '../Header/Header';
 import { HomePage } from '../pages/HomePage';
-import { AboutPage } from '../pages/AboutPage';
-import { ZipCodesPage } from '../pages/ZipCodesPage';
+import { FaqPage } from '../pages/FaqPage';
+import { ContactPage } from '../pages/ContactPage';
+import { ApplicantPage } from '../pages/ApplicantPage';
+import { BioPage } from '../pages/BioPage';
 
 
 // COMPONENT

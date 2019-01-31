@@ -1,14 +1,14 @@
 import {
-    FETCH_ZIPCODES_PENDING,
-    FETCH_ZIPCODES_FULFILLED,
-    FETCH_ZIPCODES_REJECTED
-} from '../actions/ZipCodeActions';
+    FETCH_FOSTERS_PENDING,
+    FETCH_FOSTERS_FULFILLED,
+    FETCH_FOSTERS_REJECTED
+} from '../actions/FostersActions';
 
 
 // INITIALIZE STATE
 
 const initialState = {
-    zipCodes: [],
+    fosters: [],
     fetching: false,
     fetched: false,
     failed: false
@@ -17,28 +17,29 @@ const initialState = {
 
 // REDUCER
 
-export const FetchZipCodesReducer = (state = initialState, action) => {
+export const FetchFostersReducer = (state = initialState, action) => {
+    console.log(action);
     switch(action.type) {
-        case FETCH_ZIPCODES_PENDING:
+        case FETCH_FOSTERS_PENDING:
             return {
                 ...state,
-                zipCodes: [],
+                fosters: [],
                 fetching: true,
                 fetched: false,
                 failed: false
             };
-        case FETCH_ZIPCODES_FULFILLED:
+        case FETCH_FOSTERS_FULFILLED:
             return {
                 ...state,
-                zipCodes: action.payload,
+                fosters: action.payload,
                 fetching: false,
                 fetched: true,
                 failed: false
             };
-        case FETCH_ZIPCODES_REJECTED:
+        case FETCH_FOSTERS_REJECTED:
             return {
                 ...state,
-                zipCodes: [],
+                fosters: [],
                 fetching: false,
                 fetched: false,
                 failed: true

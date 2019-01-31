@@ -3,6 +3,10 @@ body {
     font-family: $font-family;
 }
 
+a {
+    color: purple;
+}
+
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -21,5 +25,5 @@ body {
  }
 
  .navbar {
-     border-bottom: 4px solid dodgerblue; 
+     border-bottom: 4px solid purple; 
  }
