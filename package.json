@@ -49,6 +49,7 @@
     "redux-devtools-extension": "^2.13.7",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
+    "surge": "^0.20.1",
     "uglifyjs-webpack-plugin": "^1.2.0",
     "url-loader": "^0.6.2",
     "webpack": "^3.11.0",
