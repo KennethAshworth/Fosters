@@ -18,16 +18,17 @@ const renderList = fosters => (
 
 const renderListItem = foster => (
     <Fragment key={foster._id}>
-        <FosterListItem />
+        <FosterListItem 
+            name={foster.name} 
+            bio={foster.bio} 
+            avatar={foster.avatar} 
+            adopted={foster.adopted} 
+            id={foster._id} />
     </Fragment>
 );
 
 
-// name={foster.name} 
-// bio={foster.bio} 
-// avatar={foster.avatar} 
-// adopted={foster.adopted} 
-// id={foster._id}
+
 
 const FosterList = (props) => (
     <Fragment>

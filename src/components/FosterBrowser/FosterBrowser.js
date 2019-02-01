@@ -25,7 +25,6 @@ class FosterBrowser extends Component {
     }
 
     render() {
-        console.log(this.props.fosters);
         return (
             <div>
                 {

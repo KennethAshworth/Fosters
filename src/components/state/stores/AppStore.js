@@ -1,6 +1,7 @@
 // IMPORT PACKAGE REFERENCES
 
 import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 // IMPORT MIDDLEWARE
 
@@ -15,5 +16,7 @@ import { AppReducer } from '../reducers/AppReducer';
 // CONFIGURE STORE
 
 export const createAppStore = () => {
-    return createStore(AppReducer, applyMiddleware(thunk, promiseMiddleware()));
+    return createStore(AppReducer, composeWithDevTools(
+        applyMiddleware(thunk, promiseMiddleware()))
+    );
 };

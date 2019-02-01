@@ -18,7 +18,6 @@ const initialState = {
 // REDUCER
 
 export const FetchFostersReducer = (state = initialState, action) => {
-    console.log(action);
     switch(action.type) {
         case FETCH_FOSTERS_PENDING:
             return {
