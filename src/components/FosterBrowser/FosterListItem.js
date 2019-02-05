@@ -2,6 +2,7 @@
 
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const imagePath = '../../images';
 
@@ -33,12 +34,8 @@ const FosterListItem = ({id, name, bio, avatar, adopted}) => (
                     {renderAvatarImage(avatar)}
                     <small className="text-muted mx-4 mt-4">{bio}</small>
                     <div>
-                        <a href={'/bio/' + id}>
-                            <button type="button" className="btn btn-info m-1">Learn More</button>    
-                        </a>
-                        <a href={'/applicant/' + id}>
-                            <button type="button" className="btn btn-primary m-1">Apply Now</button>
-                        </a>
+                        <Link to='/bio' className='btn btn-info m-1'>Learn More</Link>
+                        <Link to='/applicant' className='btn btn-primary m-1'>Apply Now</Link>
                     </div>
                 </Fragment>
             }
