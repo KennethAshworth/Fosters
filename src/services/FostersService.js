@@ -19,3 +19,20 @@ export const fetchFosters = () => {
         }, 1000);
     });
 };
+
+export const fetchBio = (id) => {
+    return new Promise((resolve, reject) => {
+        // simulate lengthy service call
+        setTimeout(() => {
+            if (simulateError) {
+                reject('Failed to fetch bio of foster id ' + id);
+            } else {
+                var bio = fosters.find(bio => bio._id == id);
+                if (bio == undefined)
+                    reject('Failed to fetch bio of foster id ' + id);
+                else
+                    resolve(bio);
+            }
+        }, 1000);
+    });
+};

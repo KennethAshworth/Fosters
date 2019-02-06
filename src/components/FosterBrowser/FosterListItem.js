@@ -19,7 +19,7 @@ const renderAvatarImage = avatar => (
 
 
 const FosterListItem = ({id, name, bio, avatar, adopted}) => (
-    <a href="#" id={'foster-' + id} className="list-group-item list-group-item-action flex-column align-items-start">
+    <div id={'foster-' + id} className="list-group-item list-group-item-action flex-column align-items-start">
         <div className="d-flex w-100 justify-content-between">
             {
                 adopted && 
@@ -34,14 +34,14 @@ const FosterListItem = ({id, name, bio, avatar, adopted}) => (
                     {renderAvatarImage(avatar)}
                     <small className="text-muted mx-4 mt-4">{bio}</small>
                     <div>
-                        <Link to='/bio' className='btn btn-info m-1'>Learn More</Link>
-                        <Link to='/applicant' className='btn btn-primary m-1'>Apply Now</Link>
+                        <Link to={'/bio/' + id} className='btn btn-info m-1'>Learn More</Link>
+                        <Link to={'/applicant/' + id} className='btn btn-primary m-1'>Apply Now</Link>
                     </div>
                 </Fragment>
             }
         </div>
         <span className="text-muted ml-1">{name}</span>
-    </a>
+    </div>
 );
 
 FosterListItem.propTypes = {

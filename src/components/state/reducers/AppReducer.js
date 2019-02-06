@@ -5,11 +5,13 @@ import { combineReducers } from 'redux';
 
 // IMPORT REDUCERS
 
-import { FetchFostersReducer } from '../reducers/FetchFostersReducer';
+import { FetchFostersReducer } from './FetchFostersReducer';
+import { FetchBioReducer } from './FetchBioReducer';
 
 
 // EXPORT APP REDUCER
 
 export const AppReducer = combineReducers({
-    fosters: FetchFostersReducer
+    fosters: FetchFostersReducer,
+    bio: FetchBioReducer,
 });

@@ -23,8 +23,8 @@ export const AppRouter = () => (
                 <Route path='/' component={HomePage} exact={true} />
                 <Route path='/faq' component={FaqPage} />
                 <Route path='/contact' component={ContactPage} />
-                <Route path='/applicant' component={ApplicantPage} />
-                <Route path='/bio' component={BioPage} />
+                <Route path='/applicant/:id' component={ApplicantPage} />
+                <Route path='/bio/:id' component={BioPage} />
                 <Redirect to="/" />
             </Switch>
         </Fragment>
