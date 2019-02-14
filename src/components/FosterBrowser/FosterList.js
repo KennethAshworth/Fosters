@@ -20,7 +20,7 @@ const renderListItem = foster => (
     <Fragment key={foster._id}>
         <FosterListItem 
             name={foster.name} 
-            bio={foster.bio} 
+            story={foster.story} 
             avatar={foster.avatar} 
             adopted={foster.adopted} 
             id={foster._id} />

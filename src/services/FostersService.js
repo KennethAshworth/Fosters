@@ -6,6 +6,7 @@ import fosters from './fosters.json';
 // COMPONENT
 
 const simulateError = false;
+const latency = 0;
 
 export const fetchFosters = () => {
     return new Promise((resolve, reject) => {
@@ -16,23 +17,23 @@ export const fetchFosters = () => {
             } else {
                 resolve(fosters);
             }
-        }, 1000);
+        }, latency);
     });
 };
 
-export const fetchBio = (id) => {
+export const fetchFosterById = (id) => {
     return new Promise((resolve, reject) => {
         // simulate lengthy service call
         setTimeout(() => {
             if (simulateError) {
-                reject('Failed to fetch bio of foster id ' + id);
+                reject('Failed to fetch foster of id ' + id);
             } else {
-                var bio = fosters.find(bio => bio._id == id);
-                if (bio == undefined)
-                    reject('Failed to fetch bio of foster id ' + id);
+                var foster = fosters.find(foster => foster._id == id);
+                if (foster == undefined)
+                    reject('Failed to fetch foster of id ' + id);
                 else
-                    resolve(bio);
+                    resolve(foster);
             }
-        }, 1000);
+        }, latency);
     });
 };

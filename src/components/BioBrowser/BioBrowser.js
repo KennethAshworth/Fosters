@@ -30,7 +30,7 @@ class BioBrowser extends Component {
         return (
             <div>
                 {
-                    this.props.fetched && <Bio bio={this.props.bio} />
+                    this.props.fetched && <Bio foster={this.props.foster} />
                 }
                 {
                     <LoadingIndicator busy={this.props.fetching} />
@@ -48,19 +48,18 @@ BioBrowser.propTypes = {
     fetched: PropTypes.bool.isRequired,
     fetching: PropTypes.bool.isRequired,
     failed: PropTypes.bool,
-    bio: PropTypes.object.isRequired,
+    foster: PropTypes.object.isRequired,
     match: PropTypes.object.isRequired,
-    params: PropTypes.object,
-    id: PropTypes.number,
 };
 
 
 // CONFIGURE REACT REDUX
 
 const mapStateToProps = state => {
-    const { fetching, fetched, failed, bio } = state.bio;
+    //console.log(state);
+    const { fetching, fetched, failed, foster } = state.bio;
 
-    return { fetching, fetched, failed, bio };
+    return { fetching, fetched, failed, foster };
 };
 
 const mapDispatchToProps = dispatch => (

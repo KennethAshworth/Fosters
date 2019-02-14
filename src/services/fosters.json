@@ -6,7 +6,7 @@
         "city" : "Dallas", 
         "state" : "TX",
         "areaDetails" : "North DFW near Addison at Belt Line and DNT",
-        "bio": "Hi my name is Boulder, im a tough cookie who loves to play with my little brother Wolfie. We tumble and play all day and love to snuggle in the evenings will you take me home?",
+        "story": "Hi my name is Boulder, im a tough cookie who loves to play with my little brother Wolfie. We tumble and play all day and love to snuggle in the evenings will you take me home?",
         "avatar": "boulder_main_pic.jpg",
         "adopted": true,
         "_id" : "01001" 
@@ -18,7 +18,7 @@
         "city" : "Dallas", 
         "state" : "TX",
         "areaDetails" : "North DFW near Addison at Belt Line and DNT",
-        "bio": "Hi my name is Wolfie, im a tough cookie who loves to play with my little brother Boulder. We tumble and play all day and love to snuggle in the evenings will you take me home?",
+        "story": "Hi my name is Wolfie, im a tough cookie who loves to play with my little brother Boulder. We tumble and play all day and love to snuggle in the evenings will you take me home?",
         "avatar": "wolfie_main_pic.jpg",
         "adopted": false,
         "_id" : "01002" 

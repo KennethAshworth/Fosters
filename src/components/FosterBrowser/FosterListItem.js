@@ -3,36 +3,26 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { Avatar } from '../shared/Avatar/Avatar';
 
-const imagePath = '../../images';
 
 // COMPONENT
 
-const renderAvatarImage = avatar => (
-    <div className="avatar">
-        <img src={imagePath + '/' + avatar} 
-            alt={'Picture of ' + name} 
-            height="100" 
-            width="100" />
-    </div>
-);
-
-
-const FosterListItem = ({id, name, bio, avatar, adopted}) => (
+const FosterListItem = ({id, name, story, avatar, adopted}) => (
     <div id={'foster-' + id} className="list-group-item list-group-item-action flex-column align-items-start">
         <div className="d-flex w-100 justify-content-between">
             {
                 adopted && 
                 <Fragment>
-                    {renderAvatarImage(avatar)}
+                    {Avatar(avatar)}
                     <span className="text-muted">This kitten has been adopted!</span>
                 </Fragment>
             }
             {
                 !adopted &&
                 <Fragment>
-                    {renderAvatarImage(avatar)}
-                    <small className="text-muted mx-4 mt-4">{bio}</small>
+                    {Avatar(avatar)}
+                    <small className="text-muted mx-4 mt-4">{story}</small>
                     <div>
                         <Link to={'/bio/' + id} className='btn btn-info m-1'>Learn More</Link>
                         <Link to={'/applicant/' + id} className='btn btn-primary m-1'>Apply Now</Link>
@@ -46,7 +36,7 @@ const FosterListItem = ({id, name, bio, avatar, adopted}) => (
 
 FosterListItem.propTypes = {
     name: PropTypes.string.isRequired,
-    bio: PropTypes.string.isRequired,
+    story: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
     adopted: PropTypes.bool.isRequired,
     id: PropTypes.string.isRequired

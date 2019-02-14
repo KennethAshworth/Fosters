@@ -28,6 +28,7 @@ export const FetchFostersReducer = (state = initialState, action) => {
                 failed: false
             };
         case FETCH_FOSTERS_FULFILLED:
+            //console.log(action.payload);
             return {
                 ...state,
                 fosters: action.payload,

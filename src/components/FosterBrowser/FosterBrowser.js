@@ -53,6 +53,7 @@ FosterBrowser.propTypes = {
 // CONFIGURE REACT REDUX
 
 const mapStateToProps = state => {
+    //console.log(state);
     const { fetching, fetched, failed, fosters } = state.fosters;
 
     return { fetching, fetched, failed, fosters };

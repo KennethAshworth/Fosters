@@ -1,4 +1,4 @@
-import { fetchBio } from '../../../services/FostersService';
+import { fetchFosterById } from '../../../services/FostersService';
 
 // FETCH BIO ACTION NAMES
 
@@ -12,7 +12,7 @@ export const FETCH_BIO_REJECTED = 'FETCH_BIO_REJECTED';
 
 const fetchBioAction = (id) => ({
     type: FETCH_BIO,
-    payload: fetchBio(id)
+    payload: fetchFosterById(id)
 });
 
 

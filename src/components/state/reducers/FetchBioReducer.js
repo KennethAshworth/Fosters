@@ -8,7 +8,7 @@ import {
 // INITIALIZE STATE
 
 const initialState = {
-    bio: {},
+    foster: {},
     fetching: false,
     fetched: false,
     failed: false
@@ -22,15 +22,16 @@ export const FetchBioReducer = (state = initialState, action) => {
         case FETCH_BIO_PENDING:
             return {
                 ...state,
-                bio: {},
+                foster: {},
                 fetching: true,
                 fetched: false,
                 failed: false
             };
         case FETCH_BIO_FULFILLED:
+            //console.log(action.payload);
             return {
                 ...state,
-                bio: action.payload,
+                foster: action.payload,
                 fetching: false,
                 fetched: true,
                 failed: false
@@ -38,7 +39,7 @@ export const FetchBioReducer = (state = initialState, action) => {
         case FETCH_BIO_REJECTED:
             return {
                 ...state,
-                bio: {},
+                foster: {},
                 fetching: false,
                 fetched: false,
                 failed: true
