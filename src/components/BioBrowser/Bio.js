@@ -24,9 +24,8 @@ const Bio = ({foster}) => (
                 <p className="mb-4 mt-2 mx-4" dangerouslySetInnerHTML={{__html: foster.story}} />
             </div>
         </div>
-        
-        
-        <div id="third-quarter" className="d-flex justify-content-center w-100 mt-4">
+        <hr/>        
+        <div id="third-quarter" className="d-flex justify-content-center w-100">
             <div className="d-flex flex-wrap justify-content-start w-75">
                 <div className="m-4"><Avatar avatar={foster.avatar} /></div>
                 <div className="m-4"><Avatar avatar={foster.avatar} /></div>
@@ -38,7 +37,8 @@ const Bio = ({foster}) => (
                 <div className="m-4"><Avatar avatar={foster.avatar} /></div>
             </div>
         </div>
-        <div id="fourth-quarter" className="d-flex justify-content-center w-100 mt-4">
+        <hr/>
+        <div id="fourth-quarter" className="d-flex justify-content-center w-100">
             <div>
                 <video width="480" height="360" controls>
                     <source src={moviePath + '/' + foster.movie} type="video/mp4"/>

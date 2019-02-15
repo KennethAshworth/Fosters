@@ -10,7 +10,7 @@ import { AvatarWrapper } from '../shared/Images/Avatar';
 
 const FosterListItem = ({id, name, story, avatar, adopted}) => (
     <div id={'foster-' + id} className="list-group-item flex-column align-items-start">
-        <div className="d-flex w-100 justify-content-between">
+        <div className="d-flex w-100 justify-content-start">
             {
                 adopted && 
                 <Fragment>
@@ -23,8 +23,10 @@ const FosterListItem = ({id, name, story, avatar, adopted}) => (
                 !adopted &&
                 <Fragment>
                     {AvatarWrapper(avatar, name)}
-                    <small className="text-muted mx-4 mt-4">{story}</small>
-                    <div>
+                    <div className="d-flex flex-grow-1 m-2">
+                        <small className="text-muted mx-4 mt-4">{story}</small>
+                    </div>
+                    <div className="d-flex flex-column m-2">
                         <Link to={'/bio/' + id} className='btn btn-info m-1'>Learn More</Link>
                         <Link to={'/applicant/' + id} className='btn btn-primary m-1'>Apply Now</Link>
                     </div>
