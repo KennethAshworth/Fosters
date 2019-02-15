@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 // COMPONENT
 
 export const Header = () => (
-    <nav className="navbar navbar-expand-lg navbar-light alert-dark">
+    <nav className="navbar navbar-expand-lg navbar-light alert-dark navbar-color">
         <a className="navbar-brand" href="/">
             <i className="fas fa-paw fa-2x" style={{color: 'purple'}}></i>
         </a>

@@ -29,5 +29,12 @@ a {
 }
 
 .avatar img {
-    border-radius: 20px;    
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.4);
+    transition: box-shadow 0.2s;
+}
+
+.avatar img:hover {
+    box-shadow: 6px 6px 15px 0px rgba(0,0,0,0.4);
+    cursor: pointer;
 }

@@ -3,47 +3,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Avatar } from '../shared/Avatar/Avatar';
+import { Avatar, AvatarWrapper } from '../shared/Images/Avatar';
+
+const moviePath = '../../assets/movies';
 
 
 // COMPONENT
 
 const Bio = ({foster}) => (
-    <div id={'bio-' + foster._id} className="flex-column align-items-start">
-        <div id="top-half" style={{background: 'red', height: 200}} className="flex-row align-items-start flex-wrap">
-            <div className="flex-row align-items-start" style={{width: 100}}>
-                Left Side Column
-                <Avatar avatar={foster.avatar}/>
+    <div id={'bio-' + foster._id} className="list-group-item d-flex flex-column align-items-start">
+        <div id="bio-header" className="d-flex justify-content-center w-100">
+            <h2>Biography</h2>
+        </div>
+        <div id="top-half" className="d-flex align-items-start">
+            <div className="d-flex flex-column mr-2">
+                {AvatarWrapper(foster.avatar, foster.name)}
                 <Link to={'/applicant/' + foster._id} className='btn btn-primary m-1'>Apply Now</Link>
             </div>
-            <div className="flex-column align-items-start" style={{width: 200}}>
-                Right Side Column
-                <h2>
-                    Header
-                </h2>
-                <p>
-                    story area
-                </p>
+            <div className="d-flex flex-column align-items-center">
+                <p className="mb-4 mt-2 mx-4">{foster.story}</p>
             </div>
         </div>
-        <div id="third-quarter" style={{background: 'green', height: 100}} className="flex-row align-items-start">
-            <div className="flex-row align-items-center">
-                This Block must be centered which hold a list of pictures
-                <div> 
-                    Pic 1 
-                </div>
-                <div> 
-                    Pic 2 
-                </div>
-                <div> 
-                    Pic 3 
-                </div>
+        
+        
+        <div id="third-quarter" className="d-flex justify-content-center w-100 mt-4">
+            <div className="d-flex flex-wrap justify-content-start w-75">
+                <Avatar avatar={foster.avatar} />
+                <Avatar avatar={foster.avatar} />
+                <Avatar avatar={foster.avatar} />
+                <Avatar avatar={foster.avatar} />
+                <Avatar avatar={foster.avatar} />
+                <Avatar avatar={foster.avatar} />
+                <Avatar avatar={foster.avatar} />
+                <Avatar avatar={foster.avatar} />
             </div>
         </div>
-        <div id="fourth-quarter" style={{background: 'pink', height:100}} className="flex-row align-items-start">
-            <div className="flex-row align-items-center">
-                This Block must be centered with a Video element, if there is a video source
-            </div>
+        <div id="fourth-quarter" className="d-flex justify-content-center w-100 mt-4">
+            <video width="480" height="360" controls>
+                <source src={moviePath + '/' + foster.movie} type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
 );

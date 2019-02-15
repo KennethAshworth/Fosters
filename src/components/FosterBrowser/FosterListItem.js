@@ -3,25 +3,26 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Avatar } from '../shared/Avatar/Avatar';
+import { AvatarWrapper } from '../shared/Images/Avatar';
 
 
 // COMPONENT
 
 const FosterListItem = ({id, name, story, avatar, adopted}) => (
-    <div id={'foster-' + id} className="list-group-item list-group-item-action flex-column align-items-start">
+    <div id={'foster-' + id} className="list-group-item flex-column align-items-start">
         <div className="d-flex w-100 justify-content-between">
             {
                 adopted && 
                 <Fragment>
-                    {Avatar(avatar)}
+                    {AvatarWrapper(avatar, name)}
                     <span className="text-muted">This kitten has been adopted!</span>
                 </Fragment>
+                
             }
             {
                 !adopted &&
                 <Fragment>
-                    {Avatar(avatar)}
+                    {AvatarWrapper(avatar, name)}
                     <small className="text-muted mx-4 mt-4">{story}</small>
                     <div>
                         <Link to={'/bio/' + id} className='btn btn-info m-1'>Learn More</Link>
@@ -30,7 +31,7 @@ const FosterListItem = ({id, name, story, avatar, adopted}) => (
                 </Fragment>
             }
         </div>
-        <span className="text-muted ml-1">{name}</span>
+        
     </div>
 );
 
