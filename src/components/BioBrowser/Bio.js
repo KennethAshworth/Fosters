@@ -21,28 +21,30 @@ const Bio = ({foster}) => (
                 <Link to={'/applicant/' + foster._id} className='btn btn-primary m-1'>Apply Now</Link>
             </div>
             <div className="d-flex flex-column align-items-center">
-                <p className="mb-4 mt-2 mx-4">{foster.story}</p>
+                <p className="mb-4 mt-2 mx-4" dangerouslySetInnerHTML={{__html: foster.story}} />
             </div>
         </div>
         
         
         <div id="third-quarter" className="d-flex justify-content-center w-100 mt-4">
             <div className="d-flex flex-wrap justify-content-start w-75">
-                <Avatar avatar={foster.avatar} />
-                <Avatar avatar={foster.avatar} />
-                <Avatar avatar={foster.avatar} />
-                <Avatar avatar={foster.avatar} />
-                <Avatar avatar={foster.avatar} />
-                <Avatar avatar={foster.avatar} />
-                <Avatar avatar={foster.avatar} />
-                <Avatar avatar={foster.avatar} />
+                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
+                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
+                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
+                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
+                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
+                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
+                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
+                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
             </div>
         </div>
         <div id="fourth-quarter" className="d-flex justify-content-center w-100 mt-4">
-            <video width="480" height="360" controls>
-                <source src={moviePath + '/' + foster.movie} type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
+            <div>
+                <video width="480" height="360" controls>
+                    <source src={moviePath + '/' + foster.movie} type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
     </div>
 );
