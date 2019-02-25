@@ -25,7 +25,8 @@ export const AppRouter = () => (
                 <Route path='/contact' component={ContactPage} />
                 <Route path='/applicant/:id' component={ApplicantPage} />
                 <Route path='/bio/:id' component={BioPage} />
-                <Redirect to="/" />
+                <Route path="**" component={HomePage} />
+                <Redirect to="/" /> { /*It would be better to build on server and through a 404, else return built dom*/ }
             </Switch>
         </Fragment>
     </BrowserRouter>
