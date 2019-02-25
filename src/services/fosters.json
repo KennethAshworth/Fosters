@@ -9,6 +9,33 @@
         "story": "<p>Named after Boulder, CO. I am just as large and strong as the Rockies! I love to dash, play, and climb all day, full of energy and life!</p>But I also now how to cuddle with my family and love to give nosies and be warm on your chest.<p>Will you adopt me and give me lots of luv!</p>",
         "shortStory": "Named after Boulder, CO. I am just as large and strong as the Rockies! I love to dash, play, and climb all day, full of energy and life!",
         "avatar": "boulder_main_pic.jpg",
+        "images": [
+            {
+                "_id": "1",
+                "path": "thumbnail_1.jpg",
+                "text": "Playing in a sand castle"
+            },
+            {
+                "_id": "2",
+                "path": "thumbnail_2.jpg",
+                "text": "Playing in a sand castle"
+            },
+            {
+                "_id": "3",
+                "path": "thumbnail_3.jpg",
+                "text": "Playing in a sand castle"
+            },
+            {
+                "_id": "4",
+                "path": "thumbnail_4.jpg",
+                "text": "Playing in a sand castle"
+            },
+            {
+                "_id": "5",
+                "path": "thumbnail_5.jpg",
+                "text": "Playing in a sand castle"
+            }
+        ],
         "movie": "movie.mp4",
         "adopted": false,
         "_id" : "01001" 
@@ -23,6 +50,48 @@
         "story": "<p>Only 6 weeks old and ready to tackle to world! I'm a tough cookie who loves to play with my big brother Boulder. We tumble and play all day and love to snuggle in the evenings.</p><p>Looking for a owner with additional pets that I can learn to love and care for. Im a brown tabby who is a bit smaller than average and had a cold when I was fostered, but now I'm all better and ready to find my furever home.</p><p>Will you adopt me and give me lots of luv!</p>",
         "shortStory": "Only 6 weeks old and ready to tackle to world! I'm a tough cookie who loves to play with my big brother Boulder.",
         "avatar": "wolfie_main_pic.jpg",
+        "images": [
+            {
+                "_id": "6",
+                "path": "thumbnail_1.jpg",
+                "text": "Playing in a sand castle"
+            },
+            {
+                "_id": "7",
+                "path": "thumbnail_2.jpg",
+                "text": "Playing in a sand castle"
+            },
+            {
+                "_id": "8",
+                "path": "thumbnail_3.jpg",
+                "text": "Playing in a sand castle"
+            },
+            {
+                "_id": "9",
+                "path": "thumbnail_4.jpg",
+                "text": "Playing in a sand castle"
+            },
+            {
+                "_id": "10",
+                "path": "thumbnail_5.jpg",
+                "text": "Playing in a sand castle"
+            },
+            {
+                "_id": "11",
+                "path": "thumbnail_6.jpg",
+                "text": "Playing in a sand castle"
+            },
+            {
+                "_id": "12",
+                "path": "thumbnail_7.jpg",
+                "text": "Playing in a sand castle"
+            },
+            {
+                "_id": "13",
+                "path": "thumbnail_8.jpg",
+                "text": "Playing in a sand castle"
+            }
+        ],
         "movie": "movie.mp4",
         "adopted": false,
         "_id" : "01002" 

@@ -1,14 +1,34 @@
 // IMPORT PACKAGE REFERENCES
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Avatar, AvatarWrapper } from '../shared/Images/Avatar';
+import { AvatarWrapper } from '../shared/Images/Avatar';
+import { Thumbnail } from '../shared/Images/Thumbnail';
 
 const moviePath = '../../assets/movies';
 
 
 // COMPONENT
+
+const renderThumbnailList = images => (
+    <div className="d-flex flex-wrap justify-content-center w-75">
+        {images.map(image => renderThumbnailItem(image))}
+    </div>
+);
+
+const renderThumbnailItem = image => (
+    <Fragment key={image._id}>
+        <div className="m-4">
+            <Thumbnail 
+                text={image.text} 
+                path={image.path} 
+                id={image._id} />
+        </div>
+    </Fragment>
+);
+
+
 
 const Bio = ({foster}) => (
     <div id={'bio-' + foster._id} className="list-group-item d-flex flex-column align-items-start">
@@ -26,15 +46,8 @@ const Bio = ({foster}) => (
         </div>
         <hr/>        
         <div id="third-quarter" className="d-flex justify-content-center w-100">
-            <div className="d-flex flex-wrap justify-content-start w-75">
-                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
-                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
-                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
-                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
-                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
-                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
-                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
-                <div className="m-4"><Avatar avatar={foster.avatar} /></div>
+            <div className="d-flex justify-content-center animated fadeIn">
+                {renderThumbnailList(foster.images)}
             </div>
         </div>
         <hr/>
@@ -48,17 +61,6 @@ const Bio = ({foster}) => (
         </div>
     </div>
 );
-
-// "name" : "Wolfie", 
-// "age" : "6 weeks", 
-// "color" : "tabby", 
-// "city" : "Dallas", 
-// "state" : "TX",
-// "areaDetails" : "North DFW near Addison at Belt Line and DNT",
-// "bio": "Hi my name is Wolfie, im a tough cookie who loves to play with my little brother Boulder. We tumble and play all day and love to snuggle in the evenings will you take me home?",
-// "avatar": "wolfie_main_pic.jpg",
-// "adopted": false,
-// "_id" : "01002" 
 
 Bio.propTypes = {
     foster: PropTypes.object.isRequired,

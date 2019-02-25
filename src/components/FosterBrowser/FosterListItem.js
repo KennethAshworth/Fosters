@@ -10,7 +10,7 @@ import { AvatarWrapper } from '../shared/Images/Avatar';
 
 const FosterListItem = ({id, name, story, avatar, adopted}) => (
     <div id={'foster-' + id} className="list-group-item flex-column align-items-start">
-        <div className="d-flex w-100 justify-content-start">
+        <div className="d-flex w-100 justify-content-between">
             {
                 adopted && 
                 <Fragment>
